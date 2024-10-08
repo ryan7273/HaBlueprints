@@ -1,0 +1,27 @@
+blueprint:
+  name: Sensor to Tracker
+  description: Sets a tracker based on a binary sensor for presence
+  domain: automation
+  input:
+    source:
+      name: Source
+      description: The binary sensor to observe
+    destination:
+      name: Destination
+      description: The tracker to set
+triggers:
+  - trigger: state
+    entity_id: !input source
+actions:
+  - action: device_tracker.see
+    data:
+      dev_id: !input destination
+      location_name: >
+        {% if trigger.to_state.state == 'on') %}
+          home
+        {% elif trigger.to_state.state == 'off') %}
+          not_home
+        {% else %}
+          unknown
+        {% endif %}
+      source_type: "router"
