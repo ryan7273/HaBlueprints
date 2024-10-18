@@ -9,9 +9,14 @@ blueprint:
     destination:
       name: Destination
       description: The tracker to set
+
+mode: restart
+max_exceeded: silent
+
 triggers:
   - trigger: state
     entity_id: !input source
+
 actions:
   - action: device_tracker.see
     data:
