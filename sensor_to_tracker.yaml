@@ -13,9 +13,9 @@ blueprint:
 mode: restart
 max_exceeded: silent
 
-triggers:
-  - trigger: state
-    entity_id: !input source
+# triggers:
+#   - trigger: state
+#     entity_id: !input source
 
 # actions:
   # - action: device_tracker.see
