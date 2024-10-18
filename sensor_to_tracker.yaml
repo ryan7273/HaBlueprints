@@ -17,16 +17,16 @@ triggers:
   - trigger: state
     entity_id: !input source
 
-actions:
-  - action: device_tracker.see
-    data:
-      dev_id: !input destination
-      location_name: >
-        {% if trigger.to_state.state == 'on') %}
-          home
-        {% elif trigger.to_state.state == 'off') %}
-          not_home
-        {% else %}
-          unknown
-        {% endif %}
-      source_type: "router"
+# actions:
+  # - action: device_tracker.see
+    # data:
+      # dev_id: !input destination
+      # location_name: >
+      #   {% if trigger.to_state.state == 'on') %}
+      #     home
+      #   {% elif trigger.to_state.state == 'off') %}
+      #     not_home
+      #   {% else %}
+      #     unknown
+      #   {% endif %}
+      # source_type: "router"
