@@ -23,6 +23,8 @@ mode: restart
 max_exceeded: silent
 
 triggers:
+  - trigger: homeassistant
+    event: start
   - trigger: state
     entity_id: !input source
 
