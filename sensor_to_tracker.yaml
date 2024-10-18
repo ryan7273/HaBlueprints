@@ -38,4 +38,4 @@ actions:
         {% else %}
           unknown
         {% endif %}
-      source_type: "router"
+      source_type: router
