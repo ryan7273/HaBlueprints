@@ -30,7 +30,7 @@ actions:
   - action: device_tracker.see
     data:
       dev_id: !input destination
-      location_name: >-
+      location_name: >_
         {% if trigger.to_state.state == 'on') %}
           home
         {% elif trigger.to_state.state == 'off') %}
