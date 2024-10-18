@@ -24,7 +24,7 @@ max_exceeded: silent
 
 triggers:
   - trigger: state
-    entity_id: "!input source"
+    entity_id: !input source
 
 actions:
   - action:
