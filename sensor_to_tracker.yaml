@@ -14,6 +14,10 @@ blueprint:
     destination:
       name: Destination
       description: The tracker to set
+      selector:
+        entity:
+          filter:
+            - domain: device_tracker
 
 mode: restart
 max_exceeded: silent
